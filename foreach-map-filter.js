@@ -153,3 +153,186 @@ Examples:
 */
 
 function doubleOddNumbers(arr) {}
+
+// doubleValues
+function doubleValues(arr) {
+    return arr.map((value) => value * 2);
+  }
+  
+  // onlyEvenValues
+  function onlyEvenValues(arr) {
+    return arr.filter((value) => value % 2 === 0);
+  }
+  
+  // showFirstAndLast
+  function showFirstAndLast(arr) {
+    return arr.map((str) => str[0] + str[str.length - 1]);
+  }
+  
+  // addKeyAndValue
+  function addKeyAndValue(arr, key, value) {
+    return arr.map((obj) => ({ ...obj, [key]: value }));
+  }
+  
+  // vowelCount
+  function vowelCount(str) {
+    const vowels = 'aeiouAEIOU';
+    const count = {};
+  
+    for (let char of str) {
+      if (vowels.includes(char)) {
+        const lowercaseChar = char.toLowerCase();
+        count[lowercaseChar] = (count[lowercaseChar] || 0) + 1;
+      }
+    }
+  
+    return count;
+  }
+  
+  // doubleValuesWithMap
+  function doubleValuesWithMap(arr) {
+    return arr.map((value) => value * 2);
+  }
+  
+  // valTimesIndex
+  function valTimesIndex(arr) {
+    return arr.map((value, index) => value * index);
+  }
+  
+  // extractKey
+  function extractKey(arr, key) {
+    return arr.map((obj) => obj[key]);
+  }
+  
+  // extractFullName
+  function extractFullName(arr) {
+    return arr.map((obj) => obj.first + ' ' + obj.last);
+  }
+  
+  // filterByValue
+  function filterByValue(arr, key) {
+    return arr.filter((obj) => obj[key]);
+  }
+  
+  // find
+  function find(arr, searchValue) {
+    return arr.find((value) => value === searchValue);
+  }
+  
+  // findInObj
+  function findInObj(arr, key, searchValue) {
+    return arr.find((obj) => obj[key] === searchValue);
+  }
+  
+  // removeVowels
+  function removeVowels(str) {
+    return str.toLowerCase().replace(/[aeiou]/g, '');
+  }
+  
+  // doubleOddNumbers
+  function doubleOddNumbers(arr) {
+    return arr.filter((value) => value % 2 !== 0).map((value) => value * 2);
+  }
+// forEach
+
+// doubleValues
+function doubleValues(arr) {
+    let result = [];
+    arr.forEach((value) => {
+      result.push(value * 2);
+    });
+    return result;
+  }
+  
+  // onlyEvenValues
+  function onlyEvenValues(arr) {
+    let result = [];
+    arr.forEach((value) => {
+      if (value % 2 === 0) {
+        result.push(value);
+      }
+    });
+    return result;
+  }
+  
+  // showFirstAndLast
+  function showFirstAndLast(arr) {
+    let result = [];
+    arr.forEach((str) => {
+      result.push(str[0] + str[str.length - 1]);
+    });
+    return result;
+  }
+  
+  // addKeyAndValue
+  function addKeyAndValue(arr, key, value) {
+    arr.forEach((obj) => {
+      obj[key] = value;
+    });
+    return arr;
+  }
+  
+  // vowelCount
+  function vowelCount(str) {
+    let result = {};
+    const vowels = 'aeiouAEIOU';
+    str.split('').forEach((char) => {
+      if (vowels.includes(char.toLowerCase())) {
+        const lowercaseChar = char.toLowerCase();
+        result[lowercaseChar] = (result[lowercaseChar] || 0) + 1;
+      }
+    });
+    return result;
+  }
+  
+  // map
+  
+  // doubleValuesWithMap
+  function doubleValuesWithMap(arr) {
+    return arr.map((value) => value * 2);
+  }
+  
+  // valTimesIndex
+  function valTimesIndex(arr) {
+    return arr.map((value, index) => value * index);
+  }
+  
+  // extractKey
+  function extractKey(arr, key) {
+    return arr.map((obj) => obj[key]);
+  }
+  
+  // extractFullName
+  function extractFullName(arr) {
+    return arr.map((obj) => obj.first + ' ' + obj.last);
+  }
+  
+  // filter
+  
+  // filterByValue
+  function filterByValue(arr, key) {
+    return arr.filter((obj) => obj[key]);
+  }
+  
+  // find
+  
+  // find
+  function find(arr, searchValue) {
+    return arr.find((value) => value === searchValue);
+  }
+  
+  // findInObj
+  function findInObj(arr, key, searchValue) {
+    return arr.find((obj) => obj[key] === searchValue);
+  }
+  
+  // removeVowels
+  function removeVowels(str) {
+    return str.toLowerCase().replace(/[aeiou]/gi, '');
+  }
+  
+  // doubleOddNumbers
+  function doubleOddNumbers(arr) {
+    return arr.filter((value) => value % 2 !== 0).map((value) => value * 2);
+  }
+  
